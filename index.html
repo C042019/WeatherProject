@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Project</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/9bd6495949.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/style.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -16,28 +15,28 @@
         <div class="container">
             <img src="https://www.marinareservation.com/articles/wp-content/uploads/2017/02/Lavender-fields-cover.jpg" alt="background">
             <div class="allweather">
-<h1 id="date" ></h1>
+<h1>Last updated at<span id="date"></span></h1>
 <h2 class="cityname" id="city"></h2>
 <div class="row">
 <div class="col">
 <div class="dayOf" id="temperature"><span id="units">°F</span></div>
-       <ul>
-            <li>Feels Like:<span id="feeltemp">%</span></li>
-            <li>Humidity:<span id="humidity">%</span></li>
-            <li>Wind Speed:<span id="wind"> mph</span></li>
+       <ul class="first-list">
+            <li id="feeltemp">Feels Like:<span>%</span></li>
+            <li id="humidity">Humidity:<span>%</span></li>
+            <li id="wind">Wind Speed:<span> mph</span></li>
             </ul>
-            <form>
+            <form id="search-form">
                 <div class="form-group">
                     <label for="citychange" class="citychange">Enter City</label>
-                    <input type="text" class="form-control" id="cityChange" aria-describedby="city">
+                    <input type="text" class="form-control" id="city-input" placeholder="Enter a city..." autocomplete="off" aria-describedby="city">
                     <button type="button" class="btn btn-dark">Enter</button>
-                    
-                    <a href="https://github.com/C042019/WeatherProject" target="blank">Open source code by Caylee Bradley</a>
                 </div>
+                </form>
+                    <a href="https://github.com/C042019/WeatherProject" target="blank">Open source code by Caylee Bradley</a>
             </div>
             </div>
         </div>
 </div>
-<script src="script.js"></script>
+<script src="src/script.js"></script>
 </body>
 </html>
