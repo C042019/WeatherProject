@@ -1,0 +1,69 @@
+h1 {
+  font-family: "Epilogue", sans-serif;
+  text-align: center;
+  padding: 20px;
+  color: #2d132c;
+}
+
+h2 {
+  font-family: "Epilogue", sans-serif;
+  text-align: center;
+  color: #2d132c;
+  padding-top: 15px;
+}
+button {
+  margin: 0 auto;
+  display: block;
+}
+form {
+  text-align: center;
+  margin-bottom: 5px;
+}
+ul{list-style: none;
+text-align:center;
+font-weight: bold;
+font-size: 20px;
+color: #2d132c}
+
+.col-6 {
+  font-family: "Epilogue", sans-serif;
+  text-align: center;
+  font-size: 18px;
+  padding-top: 15px;
+  color: #2d132c;
+}
+.form-group {
+  font-family: "Epilogue", sans-serif;
+  padding: 20px 10px 5px;
+  color: #2d132c;
+}
+.container{
+  position: relative;
+width: 100%;
+left: 0%;
+}
+.allweather{
+  position: absolute;
+  top: 15%;
+  left:45%;
+  padding: 25px 45px ;
+  background: #fff3e2;
+  opacity: 0.8;
+  border-radius: 30px;
+}
+.dayOf {
+  text-align: center;
+  font-size: 40px;
+  color: #2d132c;
+  padding: 25px;
+}
+.second-line {
+  font-size: 25px;
+}
+.cityName {
+  font-size: 40px;
+  padding: 25px;
+}
+.citychange{
+  color: #2d132c;
+}
