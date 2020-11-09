@@ -23,6 +23,7 @@ function displayWeather(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed
   );
+   document.querySelector("#feeltemp").innerHTML = Math.round(response.data.main.feels_like);
   console.log(response.data);
 }
 
