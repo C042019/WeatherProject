@@ -35,7 +35,7 @@ function displayTemperture(response) {
   cityElement.innerHTML = response.data.name;
   feelTempElement = Math.round(response.data.weather.main);
   humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = response.data.wind.speed;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 function search(city) {
