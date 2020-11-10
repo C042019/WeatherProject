@@ -33,7 +33,7 @@ function displayTemperture(response) {
   let dateElement = document.querySelector("#date");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
-  feelTempElement = Math.round(response.data.main.feels_like);
+  feelTempElement = Math.round(response.data.weather.main);
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = response.data.wind.speed;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
