@@ -43,10 +43,10 @@ dateElement.innerHTML - formatDate(response.data.dt * 1000)
 };
 function search(city){
   let apiKey ="25ca3c40221589981906f4acf77d8a85"
-let apiUrl =`api.openweathermap.org/data/2.5/weather?q=Dallas&appid=${apiKey}&units=farenheit`;
+let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=Dallas&appid=${apiKey}&units=farenheit`;
 axios.get(apiUrl).then(displayTemperture);
 
-apiUrl =`api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=farenheit`;
+apiUrl =`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=farenheit`;
 axios.get(apiUrl).then(displayForecast);
 }
 
