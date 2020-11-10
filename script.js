@@ -23,31 +23,27 @@ return `${day} ${hours}: ${minutes}`;
 
 
 
-
-
-
-function displayTemperture(response)
-{ console.log(response.data);
-let temperatureElement = document.querySelector("#temperature");
-let windElement = document.querySelector("#wind");
-let humidityElement = document.querySelector("#humidity");
-let feelTempElement = document.querySelector("#feeltemp");
-let cityElement = document.querySelector("#city");
-let dateElement = document.querySelector("#date");
-temperatureElement.innerHTML =Math.round(response.data.main.temp);
-cityElement.innerHTML = response.data.name;
-feelTempElement = Math.round(response.data.main.feels_like);
-humidityElement.innerHTML = response.data.main.humidity;
-windElement.innerHTML = response.data.wind.speed;
-dateElement.innerHTML - formatDate(response.data.dt * 1000)
-};
-
+function displayTemperture(response) {
+  console.log(response.data);
+  let temperatureElement = document.querySelector("#temperature");
+  let windElement = document.querySelector("#wind");
+  let humidityElement = document.querySelector("#humidity");
+  let feelTempElement = document.querySelector("#feeltemp");
+  let cityElement = document.querySelector("#city");
+  let dateElement = document.querySelector("#date");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  feelTempElement = Math.round(response.data.main.feels_like);
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = response.data.wind.speed;
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+}
 function search(city) {
   let apiKey = "25ca3c40221589981906f4acf77d8a85";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Dallas&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayTemperture);
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(displayForecast);
+  //axios.get(apiUrl).then(displayForecast);
 }
 
 
